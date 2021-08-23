@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Roboto+Slab:wght@300&display=swap');
+
+/*
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Pacifico', cursive;
+*/
+ 
+/* fonts */
+@mixin roboto-slab{
+    font-family: 'Roboto Slab', serif;
+}
+
+@mixin dancing-script{
+  font-family: 'Dancing Script', cursive;
+}
+
+@mixin satisfy-font() {
+  font-family: 'Satisfy', cursive;
+}
+
+
+
+@mixin display-Position($display, $position){
+    display: $display;
+    position: $position;
+  }
+
+@mixin dimension($width,$height:auto){
+    width: $width;
+    height: $height;
+  }
+
+@mixin box-Shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+  }
+
+@mixin flex-Attribute($direction,$justify,$align) {
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }

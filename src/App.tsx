@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { Box, type SxProps, type Theme } from '@mui/material';
 
-import './App.css';
-import reactLogo from './assets/react.svg';
 import viteLogo from '../public/vite.svg';
+import reactLogo from './assets/react.svg';
 
-function App() {
-  const [count, setCount] = useState(0);
+const rootSx: SxProps<Theme> = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  height: '100%',
+};
 
+const App = () => {
   return (
-    <>
+    <Box sx={rootSx}>
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer noopener">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -18,19 +24,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Box>
   );
-}
+};
 
 export default App;

@@ -1,4 +1,5 @@
 import { Box, type SxProps, type Theme } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 import viteLogo from '../public/vite.svg';
 import reactLogo from './assets/react.svg';
@@ -13,6 +14,8 @@ const rootSx: SxProps<Theme> = {
 };
 
 const App = () => {
+  const { t } = useTranslation(['translation']);
+
   return (
     <Box sx={rootSx}>
       <div>
@@ -23,7 +26,7 @@ const App = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{t('generic.welcome')}</h1>
     </Box>
   );
 };

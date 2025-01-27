@@ -1,6 +1,7 @@
 # Features
 
 ### Template Setup
+
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A fast build tool and development server.
 - **Vitest**: A Vite-native unit test framework.

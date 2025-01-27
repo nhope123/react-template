@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import parser from "@typescript-eslint/parser";
 import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
@@ -6,7 +7,6 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import parser from "@typescript-eslint/parser";
 
 export default [
 	{ ignores: ['dist'] },
@@ -59,6 +59,7 @@ export default [
 					'newlines-between': 'always',
 				},
 			],
+			
 		},
 		settings: {
 			react: {

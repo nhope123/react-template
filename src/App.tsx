@@ -1,7 +1,7 @@
 import { Box, type SxProps, type Theme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-import viteLogo from '../public/vite.svg';
+import viteLogo from './assets/vite.svg';
 import reactLogo from './assets/react.svg';
 
 const rootSx: SxProps<Theme> = {

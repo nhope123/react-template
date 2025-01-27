@@ -34,19 +34,19 @@ This template provides a minimal setup to get React working with Vite, Vitest, M
     # or
     yarn install
    ```
+
 ### Scripts
 
-   ```sh
-    "scripts": {
-      "dev": "vite", // Starts the development server
-      "build": "tsc -b && vite build", // Builds the project
-      "lint": "eslint .", // Lints the codebase
-      "preview": "vite preview", // Previews the built project
-      "format": "prettier --write .", // Formats the codebase
-      "test": "vitest --ui" // Runs the tests
-    }
-   ```
-
+```sh
+ "scripts": {
+   "dev": "vite", // Starts the development server
+   "build": "tsc -b && vite build", // Builds the project
+   "lint": "eslint .", // Lints the codebase
+   "preview": "vite preview", // Previews the built project
+   "format": "prettier --write .", // Formats the codebase
+   "test": "vitest --ui" // Runs the tests
+ }
+```
 
 ### Project Structure
 

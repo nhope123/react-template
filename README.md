@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# React Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working with Vite, Vitest, MUI, ESLint, Prettier, and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool and development server.
+- **Vitest**: A Vite-native unit test framework.
+- **MUI**: A popular React UI framework.
+- **ESLint**: A tool for identifying and fixing linting issues.
+- **Prettier**: An opinionated code formatter.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 14 or higher)
+- npm or yarn
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/nhope123/react-template.git
+   cd react-template
+   ```
+
+2. Install dependencies:
+   ```sh
+    npm install
+    # or
+    yarn install
+   ```
+### Scripts
+
+   ```sh
+    "scripts": {
+      "dev": "vite", // Starts the development server
+      "build": "tsc -b && vite build", // Builds the project
+      "lint": "eslint .", // Lints the codebase
+      "preview": "vite preview", // Previews the built project
+      "format": "prettier --write .", // Formats the codebase
+      "test": "vitest --ui" // Runs the tests
+    }
+   ```
+
+
+### Project Structure
+
+```sh
+  react-template/
+   ├── src/
+   │   ├── assets/ // Static assets (images, fonts, etc.)
+   │   ├── components/ // React components
+   │   ├── hooks/ // Custom hooks
+   │   ├── test/ // Test setup and test files directory
+   │   └── (Source code directory)
+   └── public/
+       └── (public assets files)
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Configuration
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **ESLint**: Configured in [eslint.config.js](eslint.config.js).
+- **Prettier**: Configured in [.prettierrc](.prettierrc).
+- **TypeScript**: Configured in [tsconfig.json](tsconfig.json), [tsconfig.app.json](tsconfig.app.json), and [tsconfig.node.json](tsconfig.node.json).
+- **Vite**: Configured in [vite.config.ts](vite.config.ts).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### License
+
+This project is licensed under the [MIT](LICENSE) License.

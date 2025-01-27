@@ -1,6 +1,9 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { FC, ReactNode } from 'react';
+import { I18nextProvider } from 'react-i18next';
+
+import i18n from './i18n.ts';
 
 const theme = createTheme({
   // Add theme customization here if needed
@@ -22,7 +25,7 @@ const AppWrapper: FC<AppWrapperProps> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {children}
+      <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
     </ThemeProvider>
   );
 };

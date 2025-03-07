@@ -1,6 +1,6 @@
 # React Template
 
-This template provides a minimal setup to get React working with Vite, Vitest, MUI, ESLint, Prettier, and TypeScript.
+This template provides a minimal setup to get React working with Vite, Vitest, MUI, Bio, and TypeScript.
 
 ## Features
 
@@ -8,8 +8,7 @@ This template provides a minimal setup to get React working with Vite, Vitest, M
 - **Vite**: A fast build tool and development server.
 - **Vitest**: A Vite-native unit test framework.
 - **MUI**: A popular React UI framework.
-- **ESLint**: A tool for identifying and fixing linting issues.
-- **Prettier**: An opinionated code formatter.
+- **Bio**: A tool for identifying and fixing linting issues.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
 
 ## Getting Started
@@ -41,9 +40,8 @@ This template provides a minimal setup to get React working with Vite, Vitest, M
  "scripts": {
    "dev": "vite", // Starts the development server
    "build": "tsc -b && vite build", // Builds the project
-   "lint": "eslint .", // Lints the codebase
    "preview": "vite preview", // Previews the built project
-   "format": "prettier --write .", // Formats the codebase
+   "format": "biome check --write ./", // Formats, lint and sort imports in the codebase
    "test": "vitest --ui" // Runs the tests
  }
 ```
@@ -64,8 +62,7 @@ This template provides a minimal setup to get React working with Vite, Vitest, M
 
 ### Configuration
 
-- **ESLint**: Configured in [eslint.config.js](eslint.config.js).
-- **Prettier**: Configured in [.prettierrc](.prettierrc).
+- **Biome**: Configured in [biome.json](biome.json).
 - **TypeScript**: Configured in [tsconfig.json](tsconfig.json), [tsconfig.app.json](tsconfig.app.json), and [tsconfig.node.json](tsconfig.node.json).
 - **Vite**: Configured in [vite.config.ts](vite.config.ts).
 

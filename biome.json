@@ -6,9 +6,7 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"include": [
-			"src/**/*.{js,ts,jsx,tsx}"
-		],
+		"include": ["src/**/*.{js,ts,jsx,tsx}"],
 		"ignoreUnknown": false,
 		"ignore": []
 	},
@@ -16,8 +14,8 @@
 		"enabled": true,
 		"indentStyle": "tab",
 		"indentWidth": 2,
-		"lineWidth": 80,
-		"lineEnding": "lf"
+    "lineWidth": 80,
+    "lineEnding": "lf"
 	},
 	"organizeImports": {
 		"enabled": true
@@ -30,20 +28,18 @@
 	},
 	"javascript": {
 		"formatter": {
-			"arrowParentheses": "always"
+			"arrowParentheses":"always",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "semicolons": "always",
+      "trailingCommas": "all"
 		}
 	},
 	"json": {
-		"formatter": {
-			"trailingCommas": "none"
-		}
-	},
-	"css": {
-		"formatter": {
-			"enabled": true
-		},
-		"parser":{
-			"cssModules": true
-		}
-	}
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  }
 }
